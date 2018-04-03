@@ -1,27 +1,39 @@
-# IssueTracker
+#  Issue Tracker application
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.
+## Overview
 
-## Development server
+The Issue tracker application is a simplified version of Jira, which allows users to create
+and manage the progress of issues. This is a MEAN stack application for practice and skill showcasing.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+The first part of the exercise is required, and the additional parts are optional.
 
-## Code scaffolding
+### Part 1 - Core REST api
+Design a RESTful API for the issue tracker system, which will provide CRUD functionality to API consumers.
+Consumers should be able to complete all of the following:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. Create a new issue.  POST - /issue
+2. Retrieve an existing issue. GET - /issue/{id} or /issue
+3. Update an existing issue. - PUT - /issue
+3. Delete an issue.  - DELETE - /issue{id}
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+### Part 2 - Filtering and Sorting
 
-## Running unit tests
+Build on your initial implementation to support filter of issues on UI in AngularJS
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Filter by assignee, reporter and status
+- Filter by date range eg tasks created between start and end date
+- Sorting by created date, Ascending and Descending
+- Pagination support.
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+### Part 3 - Comments Feature
 
-## Further help
+Build on your initial implementation to support commenting on an issue. Requirements:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+- An Issue can have zero or more comments
+- Comments cannot be anonymous. They must have a user.
+- Replying to comments is not supported. Comments on an issue cannot be nested.
+
+## Getting Started
+
